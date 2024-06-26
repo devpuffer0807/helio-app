@@ -1,0 +1,311 @@
+{
+  "project-name": "Helio",
+  "validation": {
+    "required": "This field is required",
+    "number-only": "Must be a number",
+    "min": "Minimum amount is {value} {unit}",
+    "max": "Your balance is not sufficient"
+  },
+  "menu": {
+    "copyright": "© {value} Helio. All rights reserved.",
+    "links": {
+      "analytics": "Analytics",
+      "dashboard": "My Positions",
+      "borrow": "Borrow",
+      "earn": "Earn",
+      "govern": "Govern",
+      "liquidation": "Liquidation",
+      "subscription": "Liquidation Alert",
+      "campaign": "Campaign",
+      "docs": "Docs",
+      "github": "Github",
+      "bugbounty": "Bug Bounty"
+    }
+  },
+  "header": {
+    "menu-links": {
+      "analytics": "Analytics",
+      "dashboard": "Dashboard",
+      "earn": "Earn",
+      "borrow": "Borrow",
+      "govern": "Govern",
+      "liquidation": "Liquidation"
+    },
+    "account": {
+      "connect-wallet": "Connect wallet",
+      "open-explorer": "View on Explorer",
+      "copy-address": "Copy Address",
+      "wallet": "Wallet",
+      "copy-token-address": "Copy token address",
+      "add-to-wallet": "Add {unit} token to Wallet",
+      "disconnect": "Disconnect"
+    },
+    "network-indicator": "BSC Testnet"
+  },
+  "modal": {
+    "in-progress": {
+      "title": "Transaction in progress",
+      "description": "This transaction is expected to take a few seconds to complete",
+      "hash": "Tx Hash"
+    },
+    "completed": {
+      "title": "Complete!",
+      "hash": "Tx Hash",
+      "utilization": "Borrowing Utilization",
+      "loan": "Outstanding Loan",
+      "ok": "OK",
+      "repaid": "Repaid Amount",
+      "borrowed": "Borrowed",
+      "withdrawn-collateral": "Withdrawn Collateral",
+      "provided-collateral": "Provided Collateral",
+      "repaid-amount": "Repaid Amount"
+    },
+    "failed": {
+      "title": "Transaction failed",
+      "description": "Transaction has been reverted by the EVM",
+      "hash": "Tx Hash"
+    }
+  },
+  "slider": {
+    "caution": "Caution"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "total-collateral": "Total Collateral Value",
+    "total-collateral-tooltip": "The total amount of all collateralized value locked in the protocol at this time. Liquidated collateral is not included in this statistic.",
+    "total-borrow": "Total HAY Borrowed",
+    "total-borrow-tooltip": "The total amount of borrowed HAY in existence at this moment. HAY burned in the liquidation process is not included in this statistic.",
+    "total-borrowers": "Total Borrowers",
+    "total-borrowers-tooltip": "The total number of users who borrowed HAY that is still owed to the protocol. Users with liquidated positions no longer owe HAY and are not included in this statistic.",
+    "collateral-ratio": "Collateral ratio:",
+    "collateral-ratio-tooltip": "A percentage of the user's collateral that determines the maximum borrowing limit for the user. \n \nCollateral ratio is always lower than the provided collateral, and is a key factor to prove that HAY is backed by over-collateralized assets. \n \nThe formula is (total amount of HAY minted / total value of the collateral * 100), e.g. (66 / 100 * 100) for 66 HAY minted for 100 collateralized BNB.",
+    "current-overcollateralization": "Current Overcollateralization",
+    "current-overcollateralization-tooltip": "How greater total collateral is than the total amount of borrowed {unit}. It guarantees every borrowed {unit} can be repaid by collateral with a large margin.",
+    "stabilization-pool": "HELIO Stabilization Pool",
+    "stabilization-pool-tooltip": "The amount of HAY reserved to maintain HAY's redeemable value of $1 USD.",
+    "day-view": "Day",
+    "week-view": "Week",
+    "month-view": "Month",
+    "axis-date": "{date, time, ::d MMM}"
+  },
+  "earn": {
+    "dashboard": {
+      "title": "Earn",
+      "my-wallet-balance": "My wallet balance: {value}",
+      "my-deposit": "My Deposit",
+      "expected-interest": "Expect Interest",
+      "apy": "APY",
+      "year-button": "Year",
+      "month-button": "Month",
+      "week-button": "Week",
+      "day-button": "Day",
+      "my-deposit-tooltip": "Amount of HAY you deposited plus accumulated yield. This value recalculates every few seconds.",
+      "apy-tooltip": "Annual Percentage Yield - is a representation of an interest rate, \nbased on a compounding period of one year.",
+      "expected-interest-tooltip": "Estimated amount of income you receive \nin the end of selected period."
+    },
+    "form": {
+      "amount": "Amount",
+      "max-amount": "Max: {value} {unit}",
+      "proceed": "Proceed",
+      "approve": "Approve"
+    },
+    "withdraw": {
+      "title": "Withdraw"
+    },
+    "deposit": {
+      "title": "Deposit HAY",
+      "proceed": "Deposit"
+    }
+  },
+  "borrow": {
+    "add-token": "Add {token} token to Wallet",
+    "tooltip": {
+      "default": "Default tooltip"
+    },
+    "dashboard": {
+      "stats-title": "Borrow",
+      "table-title": "Collateral list",
+      "pendingWithdrawals": "Pending withdrawals: <b>{value} {token}<b/>",
+      "released-no-later-than": "Released no later than:",
+      "release-date": "{date, time, ::d MMM, yyyy}",
+      "my-collateral": "My collateral",
+      "borrowed-value": "Borrowed Value",
+      "my-borrowed-funds": "My Borrowed Funds",
+      "borrow-button": "Borrow",
+      "repay-button": "Repay",
+      "assets": "Assets",
+      "price": "Price",
+      "collateral-ratio": "Collateral ratio",
+      "collateral": "Collateral",
+      "borrowed": "Borrowed",
+      "actions": "Actions",
+      "provide": "Provide",
+      "withdraw": "Withdraw",
+      "net-borrowing-apr": "Net Borrowing APR",
+      "borrow-limit": "Borrow Limit: {value}",
+      "liquidation-price": "Liquidation {token} price: {value}",
+      "average-net-apr": "Average Net APR",
+      "distribution-apr": "Distribution APR",
+      "token-rewards": "HELIO Rewards",
+      "borrowing-apr": "Borrowing APR (Fee)",
+      "net-borrowing-apr-tooltip": "The effective interest rate for borrowing the HAY, taking into account borrow fee you have to repay and HELIO rewards you receive.",
+      "rewards-tooltip": "Rewards in HELIO tokens you receive for borrowing HAY.",
+      "my-borrowed-funds-tooltip": "Amount of HAY you borrow against appropriate collateral.",
+      "borrowing-apr-tooltip": "The interest rate charged on the amount you borrowed that you have to repay.",
+      "my-collateral-tooltip": "Collateral is the value that can be seized in case of exceeding borrow usage limit for its pay off."
+    },
+    "borrow": {
+      "title": "Borrow HAY",
+      "borrow-apr": "Net Borrowing APR: {value}",
+      "borrow-apr-tooltip": "The effective interest rate for borrowing the {unit}, taking into account borrow fee you have to repay and rewards you receive.",
+      "borrow-amount": "Borrowing Amount",
+      "borrow-utilization": "Borrowing Utilization",
+      "borrow-utilization-tooltip": "Percentage of your borrowed HAY relative to the borrow limit. The current borrow limit is 66% of your collateralized assets.<br />We suggest maintaining a borrowing threshold below 75% of the limit to avoid loan liquidation that may happen because of BNB price fluctuation. <a href=\"https://docs.helio.money/protocol/loan-liquidation\" target=\"_blank\" rel=\"noreferrer\">Read more.</a>",
+      "limit": "Borrow Limit: {value} {unit}",
+      "total-loan": "Total Outstanding Loan",
+      "caution": "You are above a 75% borrowing usage. It is recommended that you decrease this by repaying loans or providing more collateral to lower the risk of a liquidation event",
+      "proceed": "Proceed"
+    }
+  },
+  "withdraw": {
+    "withdraw": {
+      "title": "Withdraw {unit} Collateral",
+      "withdrawal-amount": "Withdrawal Amount",
+      "withdrawing-token": "Withdrawing Token",
+      "withdrawable": "Available: {value}",
+      "balance": "Balance: ",
+      "withdrawable-tooltip": "<b>If borrowed HAY = 0</b>, withdrawable balance = collateral value<br /><br /><b>If borrowed HAY > 0</b>, withdrawable balance = (collateral - (borrowed / collateral Ratio)) * 0.95",
+      "borrow-limit": "New Borrow Limit",
+      "proceed": "Proceed",
+      "period": "Borrowing Utilization",
+      "withdraw-period": "Withdrawal Period",
+      "withdraw-period-value": "7-15 days",
+      "withdraw-period-instant": "Instant",
+      "info": "You can withdraw any amount if you choose to receive collateral in a liquid staking withdrawing token in the boxes above.",
+      "withdraw-with-token": "Receive collateral with {unit} for instant withdrawal with no amount limits.",
+      "token-ratio": "You will get {total} {firstUnit} (1 {firstUnit} = {ratio} {secondUnit})",
+      "add-token-to-wallet": "Add {unit} token to Wallet",
+      "caution": "You are above a 75% borrowing usage. It is recommended that you decrease this by repaying loans or providing more collateral to lower the risk of a liquidation event",
+      "max": "MAX",
+      "withdrawing-period": "Withdrawing Period",
+      "fee": "Fee: ",
+      "percent": "{value} %"
+    }
+  },
+  "repay": {
+    "title": "Repay HAY",
+    "subtitle": "Net Borrowing APR: {value}",
+    "repay-amount": "Repay Amount",
+    "max": "Wallet balance: {value}",
+    "borrow-limit": "Borrow Limit {value} {unit}",
+    "estimated": "Estimated {token} Liquidation Price",
+    "total": "Total Outstanding Loan",
+    "send-amount": "Send Amount",
+    "proceed": "Proceed",
+    "approve": "Approve",
+    "utilization": "Borrowing Utilization",
+    "my-dept": "My debt: {value} {unit}"
+  },
+  "units": {
+    "LOAN_TOKEN": "HAY",
+    "MAIN_TOKEN": "HELIO",
+    "STAKED_TOKEN": "ankrBNB",
+    "COLLATERAL_MAIN_TOKEN": "BNB",
+    "COLLATERAL_SECOND_TOKEN": "BUSD",
+    "COLLATERAL_ETH_TOKEN": "ETH",
+    "COLLATERAL_SNBNB_TOKEN": "SnBNB",
+    "COLLATERAL_WBETH_TOKEN": "WBETH",
+    "USD": "USD",
+    "USD-value": "{value} USD",
+    "LOAN_TOKEN-value": "{value} HAY",
+    "$-value": "${value}",
+    "STAKED_TOKEN-value": "{value} ankrBNB",
+    "COLLATERAL_MAIN_TOKEN-value": "{value} BNB",
+    "COLLATERAL_SECOND_TOKEN-value": "{value} BUSD",
+    "COLLATERAL_ETH_TOKEN-value": "{value} ETH",
+    "COLLATERAL_SNBNB_TOKEN-value": "{value} SnBNB",
+    "COLLATERAL_WBETH_TOKEN-value": "{value} WBETH",
+    "percent": "{value} %",
+    "percent-no-space": "{value}%",
+    "≈$-value": "≈ ${value}",
+    "compactShort": "{value, number, ::compact-short}"
+  },
+  "liquidation": {
+    "to-be-liquidated": "To be liquidated",
+    "to-be-liquidated-empty": "All positions ready to be liquidated are shown here",
+    "close-to-liquidation": "Close to liquidation",
+    "close-to-liquidation-empty": "All positions close to liquidation are shown here",
+    "history": "History",
+    "history-empty": "All liquidation history is listed here",
+    "address": "Address",
+    "collateral": "Collateral Captured",
+    "liquidator-gets": "Liquidation Cost",
+    "borrow-utilization": "Borrowing Utilization",
+    "liquidation-price": "Liquidation {unit} price",
+    "date": "Date",
+    "liquidated": "Liquidated",
+    "collateral-only": "Collateral",
+    "liquidation-cost": "Liquidation Cost",
+    "profit": "Profit",
+    "liquidator-gets-tooltip": "When liquidating someone's BNB collateral, you get aBNBc instead. aBNBc is a liquid staking token that represents staked BNB plus accumulated staking rewards.\nJust by keeping aBNBc in your wallet, you will keep earning rewards.\nYou can also unstake aBNBc at fair value on Ankr Staking or use it for DeFi strategies on other platforms.",
+    "liquidate": "Launch liquidation",
+    "how-works": "How liquidation works?",
+    "per": "per"
+  },
+  "subscription": {
+    "title": "Liquidation Alert System",
+    "unsubscribed-title": "You have been successfully unsubscribed",
+    "description": "Receive a telegram alert if your loan has exceeded the suggested borrowing limit 75% due to collateral price fluctuation. We encourage you to sign up to stay alerted and avoid risk of liquidation ",
+    "to-sign-up": "To Sign Up:",
+    "step-first": "Sign in on wallet end and copy the 6 digits verification code shown below.",
+    "step-second": "Send the 6 digits verification code to Telegram bot to complete signup",
+    "verification-code": "Verification code",
+    "one-time-code": "One-time code",
+    "sign-message": "Sign message",
+    "open-telegram-bot": "Open Telegram bot",
+    "telegram-username": "Telegram username",
+    "unsubscribe": "Unsubscribe",
+    "go-to-dashboard": "Go to dashboard"
+  },
+  "chain": {
+    "1": "Ethereum Mainnet",
+    "3": "Ropsten",
+    "4": "Rinkeby",
+    "5": "Ethereum Goerli",
+    "6": "Kotti",
+    "56": "BNB Chain",
+    "61": "Classic",
+    "63": "Mordor",
+    "97": "BNB Chain Testnet",
+    "137": "Polygon Mainnet",
+    "43113": "Avalanche C-Chain",
+    "43114": "Avalanche",
+    "2018": "Dev",
+    "250": "Fantom Opera",
+    "4002": "Fantom Testnet",
+    "80001": "Mumbai"
+  },
+  "routes": {
+    "page-not-found": "Page not found"
+  },
+  "warning": {
+    "caution:": "Caution:",
+    "borrowing-threshold": "We suggest maintaining a borrowing threshold below 75% to avoid a liquidation event. You can provide more collateral or repay your borrow.",
+    "liquidated": "Your collateral of {value} {unit} was liquidated at {date, time, ::hh:mm a} (GMT) on {date, time, ::MMMM d}, {date, time, ::yyyy}! This might be triggered by a drop in the collateral asset’s price, pushing your loan cost to exceed the threshold of collateral value.",
+    "above-threshold": "Helio Account Warning! Your loan cost exceeds 75% of collateral value. This might cause triggering a liquidation event. To avoid this, either add the collateral or repay your loaned amount."
+  },
+  "error": {
+    "NetworkIsAlreadyActive": "The network is active already",
+    "UnsupportedChainId": "Unsupported chain id {chainId}"
+  },
+  "exploit": {
+    "attention": "Attention!",
+    "can-track": "You can track Helio Bad Debt Burn Progress in real time",
+    "cease-busd": "Helio Protocol has ceased using BUSD as collateral. Please withdraw your BUSD collateral by 31.12.2023, 23:59 UTC time and borrow HAY with other collateral.",
+    "here": "here",
+    "suspended": "Due to exploit of HAY collateral mechanism service was temporarily suspended.",
+    "announcement": "Before the official announcement, please do not participate in the transaction of HAY to avoid unnecessary losses.",
+    "keep-updated": "We keep you updated on Twitter:",
+    "close": "Close"
+  }
+}

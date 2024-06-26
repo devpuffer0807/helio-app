@@ -1,0 +1,148 @@
+{
+  "name": "helio",
+  "version": "1.0.10",
+  "private": true,
+  "homepage": "/app/",
+  "dependencies": {
+    "@ankr.com/provider": "2.1.0",
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@coinbase/wallet-sdk": "^3.5.4",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.5.2",
+    "@redux-requests/core": "^1.7.0",
+    "@reduxjs/toolkit": "1.8.3",
+    "@siddomains/sidjs": "^0.1.16",
+    "@types/react-gtm-module": "^2.0.1",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "async-mutex": "^0.3.2",
+    "axios": "^0.26.1",
+    "bignumber.js": "^9.0.2",
+    "date-fns": "^2.28.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
+    "notistack": "^2.0.5",
+    "react": "~17.0.2",
+    "react-dom": "17.0.2",
+    "react-gtm-module": "^2.0.11",
+    "react-hook-form": "^7.28.1",
+    "react-intl-universal": "^2.4.12",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "4.0.3",
+    "react-uid": "^2.3.2",
+    "recharts": "^2.1.9",
+    "redux": "^4.1.2",
+    "redux-saga": "^1.2.1",
+    "reselect": "^4.1.5",
+    "scryptsy": "^2.1.0",
+    "tss-react": "^3.7.0",
+    "use-query-params": "^2.2.0",
+    "web3": "1.7.0",
+    "web3-core": "1.7.0",
+    "web3-eth-contract": "1.7.0",
+    "web3-utils": "1.7.0",
+    "web3modal": "^1.9.5",
+    "@sentry/react": "^7.35.0"
+  },
+  "scripts": {
+    "start": "yarn start:dev",
+    "start:dev": "env-cmd -f .env.dev react-scripts start",
+    "start:stage": "env-cmd -f .env.stage react-scripts start",
+    "start:prod": "env-cmd -f .env.prod react-scripts start",
+    "build:dev": "env-cmd -f .env.dev yarn build",
+    "build:stage": "env-cmd -f .env.stage yarn build",
+    "build:prod": "env-cmd -f .env.prod yarn build",
+    "build": "yarn typechain && react-scripts build",
+    "typechain": "typechain --target web3-v1 --out-dir src/modules/core/api/types 'src/modules/core/api/contracts/*.json'",
+    "postbuild": "react-snap",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "commit": "git-cz",
+    "lint": "eslint --ext .tsx,.ts . --fix",
+    "beforecommit": "lint-staged"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not ie <= 99",
+      "not android <= 4.4.4",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@typechain/web3-v1": "^6.0.0",
+    "@types/lodash": "^4.14.181",
+    "@types/react": "17.0.42",
+    "@types/react-dom": "~17.0.14",
+    "@types/react-redux": "^7.1.23",
+    "@typescript-eslint/eslint-plugin": "~5.16.0",
+    "@typescript-eslint/parser": "~5.16.0",
+    "cz-conventional-changelog": "3.3.0",
+    "env-cmd": "^10.1.0",
+    "eslint-config-airbnb": "~19.0.4",
+    "eslint-config-airbnb-typescript": "~16.1.4",
+    "eslint-config-prettier": "~8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-typescript": "~0.14.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-webpack-plugin": "~3.1.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "~2.6.0",
+    "react-error-overlay": "^6.0.10",
+    "react-snap": "^1.23.0",
+    "typechain": "^8.0.0",
+    "typescript": "~4.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true
+    }
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "include": [
+      "/provide/",
+      "/earn/",
+      "/earn/boosted-vaults/stake",
+      "/earn/boosted-vaults/unstake",
+      "/earn/stake/",
+      "/earn/unstake/",
+      "/withdraw/",
+      "/borrow/",
+      "/repay/",
+      "/airdrop/"
+    ],
+    "skipThirdPartyRequests": true,
+    "inlineCss": true
+  }
+}

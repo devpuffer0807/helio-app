@@ -1,0 +1,116 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "createDefaultProgram": true,
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "unused-imports"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-curly-newline": "off",
+    "class-methods-use-this": "off",
+    "no-promise-executor-return": "off",
+    "no-nested-ternary": "off",
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "no-param-reassign": "off",
+    "no-case-declarations": "off",
+    "camelcase": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "prefer-template": "warn",
+    "no-return-assign": "warn",
+    "no-unreachable": "warn",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "arrow-body-style": "off",
+    "consistent-return": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-useless-constructor": "off",
+    "no-plusplus": "off",
+    "no-restricted-exports": "off",
+    "no-restricted-syntax": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "no-void": "off",
+    "prefer-arrow-callback": "off",
+    "react/forbid-prop-types": "off",
+    "react/state-in-constructor": "off",
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": "function-declaration"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "unused-imports/no-unused-imports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)"
+          ],
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          ["^(components|assets|store|modules|hooks|utils|consts)(/.*|$)"],
+          ["^\\u0000"],
+          // Style imports.
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error"
+  }
+}
